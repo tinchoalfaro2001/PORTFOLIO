@@ -394,7 +394,7 @@
             <!-- Perfil / Sobre Mí -->
             <section class="profile-section">
                 <div class="profile-img-container">
-                    <!-- Reemplaza "tu-foto.jpg" con tu foto real -->
+                    <!-- Imagen 1: Foto de perfil principal -->
                     <img src="tu-foto.jpg" alt="Martín Hernán Redondo Alfaro" class="profile-img">
                 </div>
                 <div class="profile-info">
@@ -462,7 +462,6 @@
                     </div>
 
                     <div class="skill-card">
-                        <!-- Icono representativo de SQL -->
                         <i class="fas fa-database" style="color: #00758f;"></i>
                         <span>SQL (SQLite)</span>
                     </div>
@@ -512,8 +511,6 @@
                         </div>
                     </div>
 
-                    <!-- AQUÍ PODRÁS COPIAR Y PEGAR NUEVAS TARJETAS DE PROYECTOS EN EL FUTURO -->
-
                 </div>
             </section>
 
@@ -550,6 +547,7 @@
                     <li><strong>Power BI / DAX:</strong> Modelado de datos en esquema Estrella. Creación de métricas condicionales para proyecciones de cierre de mes, cálculo de variaciones nominales año contra año y diseño de una interfaz interactiva con navegación dinámica por años y meses para auditoría de tendencias temporales.</li>
                 </ul>
 
+                <!-- Imagen 2: Vista General Chinook -->
                 <div class="project-img-box">
                     <img src="img/chinook_reporte_general.jpg" alt="Reporte General Chinook Power BI">
                     <span class="img-caption">Vista general del dashboard interactivo desarrollado en Power BI.</span>
@@ -559,15 +557,18 @@
                 <p>Para profundizar en las anomalías detectadas, se aislaron los comportamientos de los dos países con mayor volatilidad comercial:</p>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <!-- Imagen 3: Líneas Brasil -->
                     <div style="background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #334155;">
                         <img src="img/chinook_brasil_lineas.jpg" alt="Gráfico de líneas - Brasil" style="max-width:100%; height:auto; border-radius:4px;">
                         <span class="img-caption">Evolución temporal de Brasil: Evidencia visual del impacto estacional y la retracción.</span>
                     </div>
+                    <!-- Imagen 4: Montos Canadá -->
                     <div style="background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #334155;">
                         <img src="img/chinook_canada_montos.jpg" alt="Montos anuales - Canadá" style="max-width:100%; height:auto; border-radius:4px;">
                         <span class="img-caption">Matriz de Canadá: Detalle analítico de montos nominales y variaciones año contra año.</span>
                     </div>
                 </div>
+            </div>
         </div>
 
 
@@ -575,37 +576,38 @@
         <!-- VISTA DE DETALLE: PROYECTO OLIST           -->
         <!-- ========================================== -->
         <div id="proyecto-olist" class="project-view">
-                    <button class="btn btn-secondary" onclick="closeProject()">
-                        <i class="fas fa-arrow-left"></i> Volver al Inicio
-                    </button>
+            <button class="btn btn-secondary" onclick="closeProject()">
+                <i class="fas fa-arrow-left"></i> Volver al Inicio
+            </button>
                     
-                    <div class="project-header-meta">
-                        <h2>Brazilian E-Commerce: Optimización de Mermas y Logística Inversa</h2>
-                        <span class="job-meta">Herramientas: SQL (SQLite) | Excel Avanzado | Power Query</span>
-                    </div>
+            <div class="project-header-meta">
+                <h2>Brazilian E-Commerce: Optimización de Mermas y Logística Inversa</h2>
+                <span class="job-meta">Herramientas: SQL (SQLite) | Excel Avanzado | Power Query</span>
+            </div>
         
-                    <div class="project-body">
-                        <h5>🏬 Sobre la Empresa</h5>
-                        <p>Olist es una plataforma tecnológica de retail líder en Brasil que funciona como un integrador de marketplaces. Permite que miles de pequeñas y medianas empresas locales publiquen sus productos en los sitios de comercio electrónico más grandes del país, unificando la facturación, los canales de atención y la gestión de envíos bajo una misma infraestructura operativa.</p>
+            <div class="project-body">
+                <h5>🏬 Sobre la Empresa</h5>
+                <p>Olist is una plataforma tecnológica de retail líder en Brasil que funciona como un integrador de marketplaces. Permite que miles de pequeñas y medianas empresas locales publiquen sus productos en los sitios de comercio electrónico más grandes del país, unificando la facturación, los canales de atención y la gestión de envíos bajo una misma infraestructura operativa.</p>
         
-                        <h5>⚠️ Problemática</h5>
-                        <p>El análisis tradicional de ventas solía enfocarse únicamente en el volumen bruto de facturación. Sin embargo, el verdadero margen de ganancia se estaba erosionando debido a las mermas operativas: costos hundidos de logística inversa (flete) en pedidos cancelados o rechazados post-despacho, donde la empresa ya había absorbido el valor de la distribución de última milla. El objetivo fue identificar los puntos críticos de fuga y proponer soluciones estructurales.</p>
+                <h5>⚠️ Problemática</h5>
+                <p>El análisis tradicional de ventas solía enfocarse únicamente en el volumen bruto de facturación. Sin embargo, el verdadero margen de ganancia se estaba erosionando debido a las mermas operativas: costos hundidos de logística inversa (flete) en pedidos cancelados o rechazados post-despacho, donde la empresa ya había absorbido el valor de la distribución de última milla. El objetivo fue identificar los puntos críticos de fuga y proponer soluciones estructurales.</p>
         
-                        <h5>🛠️ Herramientas Utilizadas</h5>
-                        <ul>
-                            <li><strong>SQL (sqliteviz):</strong> Modelado de datos desde la base original, utilizando Window Functions (ROW_NUMBER()) y expresiones de agrupamiento para solucionar problemas de duplicaciones por producto en pedidos multi-ítem.</li>
-                            <li><strong>Power Query:</strong> Extracción, transformación y carga (ETL) automatizada para importar y unificar la base de datos optimizada dentro de Excel.</li>
-                            <li><strong>Excel Avanzado:</strong> Procesamiento dinámico, lógicas condicionales robustas (SI.ERROR), consolidación de dimensiones con BUSCARV y diseño de mapas de calor para auditoría visual.</li>
-                        </ul>
+                <h5>🛠️ Herramientas Utilizadas</h5>
+                <ul>
+                    <li><strong>SQL (sqliteviz):</strong> Modelado de datos desde la base original, utilizando Window Functions (ROW_NUMBER()) y expresiones de agrupamiento para solucionar problemas de duplicaciones por producto en pedidos multi-ítem.</li>
+                    <li><strong>Power Query:</strong> Extracción, transformación y carga (ETL) automatizada para importar y unificar la base de datos optimizada dentro de Excel.</li>
+                    <li><strong>Excel Avanzado:</strong> Procesamiento dinámico, lógicas condicionales robustas (SI.ERROR), consolidación de dimensiones con BUSCARV y diseño de mapas de calor para auditoría visual.</li>
+                </ul>
         
-                        <h5>📁 Proceso SQL: Interfaz y Consulta para la Extracción de los Datos</h5>
+                <h5>📁 Proceso SQL: Interfaz y Consulta para la Extracción de los Datos</h5>
                         
-                        <div class="project-img-box">
-                            <img src="img/olist_interfaz_sql.png" alt="Interfaz de consulta SQL en sqliteviz">
-                            <span class="img-caption">Entorno de desarrollo y modelado relacional en sqliteviz.</span>
-                        </div>
+                <!-- Imagen 5: Interfaz SQL Olist -->
+                <div class="project-img-box">
+                    <img src="img/olist_interfaz_sql.png" alt="Interfaz de consulta SQL en sqliteviz">
+                    <span class="img-caption">Entorno de desarrollo y modelado relacional en sqliteviz.</span>
+                </div>
         
-                        <pre><code>WITH items_numerados AS (
+                <pre><code>WITH items_numerados AS (
             SELECT 
                 oi.order_id,
                 oi.product_id,
@@ -668,32 +670,36 @@
         LEFT JOIN product_category_name_translation t ON p.product_category_name = t.product_category_name
         LEFT JOIN olist_sellers_dataset s ON i.seller_id = s.seller_id;</code></pre>
         
-                        <div class="project-img-box">
-                            <img src="img/olist_resultado_sql.png" alt="Resultado de Consulta SQL">
-                            <span class="img-caption">Resultado limpio de la consulta optimizada procesada en SQLite.</span>
-                        </div>
-        
-                        <h5>📊 Consolidación y Procesamiento en Excel</h5>
-                        <div class="project-img-box">
-                            <img src="img/olist_analisis_excel.png" alt="Análisis de mermas y mapas de calor en Excel">
-                            <span class="img-caption">Estructuración de datos de fletes y auditoría visual mediante mapas de calor realizados en Excel.</span>
-                        </div>
-        
-                        <h5>💡 Resultados Clave del Análisis</h5>
-                        <p><strong>Análisis por Categoría:</strong><br>
-                        • <em>Optimización de pc_gamer:</em> Aunque presenta una Tasa de Merma del 11.11%, responde a una baja penetración analizada (un único ticket cancelado). Al ser un sector de nicho de ticket promedio alto, se propone traccionar volumen para diluir el peso de cancelaciones.<br>
-                        • <em>Descontinuación de dvds_blu_ray:</em> Muestra claras señales de obsolescencia con pérdidas recurrentes por flete (0.61%). Se recomendó liquidar stock remanente y reasignar capital a categorías eficientes.</p>
-        
-                        <p><strong>Análisis Geográfico y Logístico:</strong><br>
-                        • Se detectaron cuellos de botella estructurales críticos hacia el Norte y Nordeste brasileño. Para mitigar retrasos crónicos, se propuso descentralizar la red derivando órdenes hacia centros de despacho regionales más cercanos al consumidor final, reduciendo radicalmente el Lead Time.</p>
-        
-                        <p><strong>Análisis por Métodos de Pago:</strong><br>
-                        • El método <em>credit_card</em> concentró el mayor impacto monetario absoluto ($7,006.89 en fletes absorbidos sobre 334 rechazos). Se propuso implementar una política de cobro mínimo por cancelación imputable al cliente para cubrir el gasto logístico de ida y vuelta.</p>
-                    </div>
+                <!-- Imagen 6: Resultado SQL Olist -->
+                <div class="project-img-box">
+                    <img src="img/olist_resultado_sql.png" alt="Resultado de Consulta SQL">
+                    <span class="img-caption">Resultado limpio de la consulta optimizada procesada en SQLite.</span>
                 </div>
+        
+                <h5>📊 Consolidación y Procesamiento en Excel</h5>
+                <!-- Imagen 7: Análisis Excel Olist -->
+                <div class="project-img-box">
+                    <img src="img/olist_analisis_excel.png" alt="Análisis de mermas y mapas de calor en Excel">
+                    <span class="img-caption">Estructuración de datos de fletes y auditoría visual mediante mapas de calor realizados en Excel.</span>
+                </div>
+        
+                <h5>💡 Resultados Clave del Análisis</h5>
+                <p><strong>Análisis por Categoría:</strong><br>
+                • <em>Optimización de pc_gamer:</em> Aunque presenta una Tasa de Merma del 11.11%, responde a una baja penetración analizada (un único ticket cancelado). Al ser un sector de nicho de ticket promedio alto, se propone traccionar volumen para diluir el peso de cancelaciones.<br>
+                • <em>Descontinuación de dvds_blu_ray:</em> Muestra claras señales de obsolescencia con pérdidas recurrentes por flete (0.61%). Se recomendó liquidar stock remanente y reasignar capital a categorías eficientes.</p>
+        
+                <p><strong>Análisis Geográfico y Logístico:</strong><br>
+                • Se detectaron cuellos de botella estructurales críticos hacia el Norte y Nordeste brasileño. Para mitigar retrasos crónicos, se propuso descentralizar la red derivando órdenes hacia centros de despacho regionales más cercanos al consumidor final, reduciendo radicalmente el Lead Time.</p>
+        
+                <p><strong>Análisis por Métodos de Pago:</strong><br>
+                • El método <em>credit_card</em> concentró el mayor impacto monetario absoluto ($7,006.89 en fletes absorbidos sobre 334 rechazos). Se propuso implementar una política de cobro mínimo por cancelación imputable al cliente para cubrir el gasto logístico de ida y vuelta.</p>
+            </div>
+        </div>
+
+    </div><!-- Fin del contenedor -->
 
     <!-- ========================================== -->
-    <!-- LÓGICA JAVASCRIPT: CONTROL DE NAVEGACIÓN  -->
+    <!-- LÓGICA JAVASCRIPT: CONTROL DE NAVEGACIÓN   -->
     <!-- ========================================== -->
     <script>
         function openProject(projectId) {
