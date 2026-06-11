@@ -524,6 +524,15 @@
                     <li><strong>Volatilidad Cíclica en Canadá:</strong> Aunque Canadá muestra un sólido repunte en 2025, el análisis histórico revela un comportamiento inestable (pico en 2022, caída prolongada en 2023-2024 y recuperación actual). Depender de la reactivación orgánica sin entender las palancas operativas genera incertidumbre financiera.</li>
                 </ul>
 
+                <h5>💡 Resultados Clave del Análisis</h5>
+                <p><strong>Revitalización para el Mercado Brasilero:</strong><br>
+                • <em>Insight: El consumo en Brasil está atado al factor climático/cultural de las vacaciones de verano, con una fuerte inclinación hacia géneros como Latin y Brazilian Music.<br>
+                • <em>Propuesta Operativa: Lanzar campañas de Pre-Season en septiembre con ofertas exclusivas. Para mitigar el desplome de marzo, implementar un programa de fidelización con descuentos escalonados en géneros orientados al ambiente laboral/estudio (Jazz, Classical) durante el otoño austral, convirtiendo clientes estacionales en recurrentes.</p>
+        
+                <p><strong>Estabilización y Blindaje del Mercado Canadiense:</strong><br>
+                • Insight: Canadá es un mercado de alta rentabilidad pero con comportamiento "serrucho" (inestable). Su repunte en 2025 demuestra que el interés sigue, pero es propenso a retraerse.</p>
+                • Propuesta Operativa: Implementar un sistema de alertas basadas en la "Trayectoria de Ventas". Si el volumen de cantidades compradas en Canadá cae por debajo del umbral crítico mensual, activar campañas de marketing con recomendaciones personalizadas basadas en el Top de Artistas más vendidos históricamente en la región (como Iron Maiden o U2).</p>
+             
                 <h5>🛠️ Herramientas Utilizadas</h5>
                 <ul>
                     <li><strong>Power Query:</strong> Extracción y transformación de las tablas relacionales (Invoice, Customer, Track, Genre). Limpieza de datos, estandarización de fechas y optimización del modelo analítico.</li>
@@ -548,7 +557,7 @@
                     <!-- Imagen 4: Montos Canadá -->
                     <div style="background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #334155;">
                         <img src="img/chinook_canada_montos.jpg" alt="Montos anuales - Canadá" style="max-width:100%; height:auto; border-radius:4px;">
-                        <span class="img-caption">Matriz de Canadá: Detalle analítico de montos nominales y variaciones año contra año.</span>
+                        <span class="img-caption">Matriz de Canadá: Detalle de montos nominales y la gran variacion año contra año.</span>
                     </div>
                 </div>
             </div>
@@ -574,7 +583,18 @@
         
                 <h5>⚠️ Problemática</h5>
                 <p>El análisis tradicional de ventas solía enfocarse únicamente en el volumen bruto de facturación. Sin embargo, el verdadero margen de ganancia se estaba erosionando debido a las mermas operativas: costos hundidos de logística inversa (flete) en pedidos cancelados o rechazados post-despacho, donde la empresa ya había absorbido el valor de la distribución de última milla. El objetivo fue identificar los puntos críticos de fuga y proponer soluciones estructurales.</p>
+
+                <h5>💡 Resultados Clave del Análisis</h5>
+                <p><strong>Análisis por Categoría:</strong><br>
+                • <em>Optimización de pc_gamer:</em> Aunque presenta una Tasa de Merma del 11.11%, responde a una baja penetración analizada (un único ticket cancelado). Al ser un sector de nicho de ticket promedio alto, se propone traccionar volumen para diluir el peso de cancelaciones.<br>
+                • <em>Descontinuación de dvds_blu_ray:</em> Muestra claras señales de obsolescencia con pérdidas recurrentes por flete (0.61%). Se recomendó liquidar stock remanente y reasignar capital a categorías eficientes.</p>
         
+                <p><strong>Análisis Geográfico y Logístico:</strong><br>
+                • Se detectaron cuellos de botella estructurales críticos hacia el Norte y Nordeste brasileño. Para mitigar retrasos crónicos, se propuso descentralizar la red derivando órdenes hacia centros de despacho regionales más cercanos al consumidor final, reduciendo radicalmente el Lead Time.</p>
+        
+                <p><strong>Análisis por Métodos de Pago:</strong><br>
+                • El método <em>credit_card</em> concentró el mayor impacto monetario absoluto ($7,006.89 en fletes absorbidos sobre 334 rechazos). Se propuso implementar una política de cobro mínimo por cancelación imputable al cliente para cubrir el gasto logístico de ida y vuelta.</p>
+
                 <h5>🛠️ Herramientas Utilizadas</h5>
                 <ul>
                     <li><strong>SQL (sqliteviz):</strong> Modelado de datos desde la base original, utilizando Window Functions (ROW_NUMBER()) y expresiones de agrupamiento para solucionar problemas de duplicaciones por producto en pedidos multi-ítem.</li>
@@ -656,7 +676,7 @@
                 <!-- Imagen 6: Resultado SQL Olist -->
                 <div class="project-img-box">
                     <img src="img/olist_resultado_sql.jpg" alt="Resultado de Consulta SQL">
-                    <span class="img-caption">Resultado limpio de la consulta optimizada procesada en SQLite.</span>
+                    <span class="img-caption">Una vez extraidos con SQLite, se analizaron las peridas por absorcion con los datos en diferentes tablas.</span>
                 </div>
         
                 <h5>📊 Consolidación y Procesamiento en Excel</h5>
@@ -665,17 +685,6 @@
                     <img src="img/olist_analisis_excel.jpg" alt="Análisis de mermas y mapas de calor en Excel">
                     <span class="img-caption">Estructuración de datos de fletes y auditoría visual mediante mapas de calor realizados en Excel.</span>
                 </div>
-        
-                <h5>💡 Resultados Clave del Análisis</h5>
-                <p><strong>Análisis por Categoría:</strong><br>
-                • <em>Optimización de pc_gamer:</em> Aunque presenta una Tasa de Merma del 11.11%, responde a una baja penetración analizada (un único ticket cancelado). Al ser un sector de nicho de ticket promedio alto, se propone traccionar volumen para diluir el peso de cancelaciones.<br>
-                • <em>Descontinuación de dvds_blu_ray:</em> Muestra claras señales de obsolescencia con pérdidas recurrentes por flete (0.61%). Se recomendó liquidar stock remanente y reasignar capital a categorías eficientes.</p>
-        
-                <p><strong>Análisis Geográfico y Logístico:</strong><br>
-                • Se detectaron cuellos de botella estructurales críticos hacia el Norte y Nordeste brasileño. Para mitigar retrasos crónicos, se propuso descentralizar la red derivando órdenes hacia centros de despacho regionales más cercanos al consumidor final, reduciendo radicalmente el Lead Time.</p>
-        
-                <p><strong>Análisis por Métodos de Pago:</strong><br>
-                • El método <em>credit_card</em> concentró el mayor impacto monetario absoluto ($7,006.89 en fletes absorbidos sobre 334 rechazos). Se propuso implementar una política de cobro mínimo por cancelación imputable al cliente para cubrir el gasto logístico de ida y vuelta.</p>
             </div>
         </div>
 
