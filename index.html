@@ -703,27 +703,43 @@
     <!-- ========================================== -->
     <script>
         function openProject(projectId) {
-            // Oculta el inicio
+            // Oculta por completo el inicio para dar espacio al detalle
             document.getElementById('main-portfolio').style.display = 'none';
             
-            // Muestra el proyecto seleccionado agregando la clase active
-            document.getElementById(projectId).classList.add('active');
-            
-            // Sube automáticamente la pantalla al tope del proyecto
-            window.scrollTo(0, 0);
-        }
-
-        function closeProject() {
-            // Obtiene todos los bloques de proyectos y les quita la clase active
+            // Remueve la clase active de cualquier otra vista por seguridad
             var projects = document.getElementsByClassName('project-view');
             for(var i = 0; i < projects.length; i++) {
                 projects[i].classList.remove('active');
+                projects[i].style.display = 'none';
             }
             
-            // Vuelve a mostrar el inicio del portfolio
-            document.getElementById('main-portfolio').style.display = 'block';
-            window.scrollTo(0, 0);
+            // Muestra el proyecto seleccionado agregando la clase y forzando el bloque
+            var targetProject = document.getElementById(projectId);
+            if (targetProject) {
+                targetProject.classList.add('active');
+                targetProject.style.display = 'block';
+            }
+            
+            // Sube automáticamente la pantalla al tope del proyecto
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeProject() {
+            // Obtiene todos los bloques de proyectos, los oculta y limpia la clase active
+            var projects = document.getElementsByClassName('project-view');
+            for(var i = 0; i < projects.length; i++) {
+                projects[i].classList.remove('active');
+                projects[i].style.display = 'none';
+            }
+            
+            // Restablece explícitamente la visibilidad de la sección principal
+            var mainPortfolio = document.getElementById('main-portfolio');
+            if (mainPortfolio) {
+                mainPortfolio.style.display = 'block';
+            }
+            
+            // Sube la pantalla al inicio de la página principal
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
-</body>
 </html>
